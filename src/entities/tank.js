@@ -29,7 +29,11 @@ class Tank extends Entity {
     }
     
     shoot() {
-        let bullet = new Bullet(this.getBarrelEnd(), p5.Vector.mult(this.direction, SHOOT_SPEED));
+        let bullet = new Bullet(
+            p5.Vector.add(this.getBarrelEnd(), createVector(BULLET_RADIUS, BULLET_RADIUS)),
+            p5.Vector.mult(this.direction, SHOOT_SPEED)
+        );
         entities.push(bullet);
+        bullets.push({ bullet, time: millis() });
     }
 }

@@ -1,5 +1,5 @@
 
-const BULLET_RADIUS = 5;
+const BULLET_RADIUS = 2;
 const BULLET_MASS = 1;
 const BULLET_AIR_RESISTANCE = 0.5;
 const BULLET_AREA = BULLET_RADIUS ^ 2 * Math.PI;
